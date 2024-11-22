@@ -3,8 +3,8 @@ import React, { useState } from "react";
 
 const Carousel = () => {
   const images = [
-    "/images/banner.png", // Replace with your image paths
     "/images/banner.png", 
+    "/images/banner1.jpg", 
     "/images/banner.png", 
   ];
 

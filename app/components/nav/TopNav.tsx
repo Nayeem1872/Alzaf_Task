@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import DropdownMenu from "./DropdownMenu";
 
 const TopNav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,21 +30,7 @@ const TopNav = () => {
           </div>
 
           {/* Dropdown menu */}
-          {isOpen && (
-            <div className="absolute mt-2 bg-white shadow-lg rounded-md py-2 w-40 border border-gray-200">
-              <ul className="text-sm">
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                  English
-                </li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                  Spanish
-                </li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                  French
-                </li>
-              </ul>
-            </div>
-          )}
+          <DropdownMenu isOpen={isOpen} />
         </div>
         <span className="text-[#434343] font-[400px] text-[12px] cursor-pointer">
         Help Center
