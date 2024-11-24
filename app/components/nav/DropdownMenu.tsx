@@ -65,12 +65,15 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ category }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Link href={category.link} className="text-gray-700 flex items-center group-hover:text-orange-500">
+      <Link
+        href={category.link}
+        className="text-gray-700 flex items-center group-hover:text-orange-500"
+      >
         {category.title}
       </Link>
       {category.childrens && category.childrens.length > 0 && (
         <span className="ml-2 text-gray-500 group-hover:text-orange-500">
-         <img src="/images/Arrow.png" />
+          <img src="/images/Arrow.png" />
         </span>
       )}
       {category.childrens && category.childrens.length > 0 && isHovered && (

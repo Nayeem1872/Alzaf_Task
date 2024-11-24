@@ -10,7 +10,10 @@ const TopNav = () => {
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   const handleClickOutside = (event: MouseEvent) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
       setIsOpen(false);
     }
   };
@@ -31,7 +34,6 @@ const TopNav = () => {
     <div className="bg-[#F0F1F1] flex w-full px-[280px] py-2 justify-between">
       <div className="flex items-center gap-7">
         <div className="relative" ref={dropdownRef}>
-          {/* Dropdown trigger */}
           <div
             className="flex items-center justify-center text-center cursor-pointer"
             onClick={toggleDropdown}
@@ -44,11 +46,11 @@ const TopNav = () => {
               textDecorationSkipInk: "none",
             }}
           >
-            <span className="text-[#F97316] font-[400px] text-[12px]">English</span>
+            <span className="text-[#F97316] font-[400px] text-[12px]">
+              English
+            </span>
             <FaChevronDown className="ml-2 text-[#F97316]" />
           </div>
-
-          {/* Dropdown menu */}
           <DropdownMenu isOpen={isOpen} />
         </div>
         <span className="text-[#434343] font-[400px] text-[12px] cursor-pointer">
